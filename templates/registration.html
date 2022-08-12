@@ -1,0 +1,36 @@
+<!-- Look at console -->
+<html>
+<head>
+    <title>Registration Form Using jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'js/register.js' %}"></script>
+</head>
+
+<body>
+<div class="login-page">
+    <div class="form">
+        <form class="register-form">
+            <input id="create-username" type="text" placeholder="username" value="test"/>
+            <input id="create-password" type="text" placeholder="password" value="test"/>
+            <input id="create-email" type="text" placeholder="email address" value="test@test.com"/>
+            <button name="create-button" type="button" id="create-button">
+                Register
+            </button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+        <form class="login-form">
+            <input id="login-username" type="text" placeholder="username"
+                   name="login-username"/>
+            <input id="login-password" type="text" placeholder="password"
+                   name="login-password"/>
+            <button name="login-button" type="button" id="login-button">login
+            </button>
+            <p class="message">Not registered? <a href="#">Create an
+                account</a></p>
+        </form>
+    </div>
+</div>
+</body>
+</html>
