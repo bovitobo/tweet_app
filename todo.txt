@@ -1,0 +1,46 @@
+TODO:
+    Write a Simple Twitter Service
+    Twitter is a service that allows users to read and write tweets which are strings of text
+    that are 140 characters or less in length. Tweets are written by users and can only be
+    viewed by other users who follow the author.
+    Use the Django REST Framework (or another framework of your choice) to set up a local
+    API that provides functionality for users to do the following actions:
+    ● Create an account
+    ● Write a tweet
+    ● Follow other users
+    ● View a list of tweets written by the users they follow
+    The service should be run locally and have API endpoints that satisfy the required
+    functionality. Authorization can be basic password based. Please include tests and
+    documentation, but don’t spend more than 2 hours on the assessment. It’s OK if the
+    solution is incomplete; it only serves as a launching point for discussion.
+    Please deliver your solution by providing a Github repository link.
+
+
+    DESIGN
+    UserAccount that has field 'followed_by' many UserAccount, not symmetrical()
+    UserAccount.create()
+    UserAccount.login()
+    UserAccount.is_logged_in()
+    UserAccount.logout()
+    UserAccount.follow(user_account)
+
+    Tweet.create()
+    Tweet.list(user_account)
+    Tweet.list_following_tweets()
+
+    directory structure
+    twitter_app
+        - rest_api
+            - user_account
+            - tweet
+        - models
+        -
+    1. Create Account
+    2. Login
+    3. Write tweet
+    4. Follow other users
+    5. View a list of tweets written by the users they follow
+    6. Tests
+    7. Docs
+
+
