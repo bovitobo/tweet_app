@@ -34,5 +34,3 @@ class TestTweet:
         assert user_account_b.username == 'Danny'
         assert UserAccount.objects.filter(username='Danny', followed_by=user_account_a).exists()
         assert len(Tweet.list_following_tweets(user_account_a, 20)) == 12
-
-

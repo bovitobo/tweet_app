@@ -75,16 +75,13 @@ $(document).ready(function() {
 		console.log("Email " + email);
 
 		if(createUsernameValid == true && createPasswordValid == true && createEmailValid == true) {
-		var token = $.cookie("csrftoken");
           $.ajax({
-                url:'user_account',
+                url:'register',
                 type:'post',
-                headers : { 'X-CSRFToken' : token},
                 data:{action:'register',username:username,password:password,email:email},
                 success:function(response){
-                    var msg = "";
-                    if(response == 1){
-                        window.location = "main_page";
+                    if(response == 'success'){
+                        window.location = "/tweet_app";
                     }else{
                         msg = "Invalid username and password!";
                     }
